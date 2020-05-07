@@ -1,0 +1,95 @@
+.sunglassesMenu{
+  li{
+    &:nth-of-type(2){
+      border-bottom: 16px solid $primaryColor;
+      a{
+        padding-bottom: 8px;
+      }
+    }
+  }
+  @media (max-width: $tableSize){
+    li{
+      &:nth-of-type(2){
+        border-bottom: 8px solid $primaryColor;
+        a{
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+  @media (max-width: $mobileSize){
+    li{
+      &:nth-of-type(2){
+        border-bottom: 4px solid $primaryColor;
+        a{
+          padding-bottom: 5px;
+        }
+      }
+    } 
+  }
+}
+
+.sunglassesList{
+  margin-bottom: 52px;
+  li{
+    width: 32%;
+    margin-bottom: 104px;
+    &:nth-child(n+7){
+      display: none;
+    }
+  }
+  .colorLeft, .colorRight{
+    width: 19px;
+    height: 19px;
+  }
+  @media (max-width: $tableSize){
+    margin-bottom: 53px;
+    li{
+      width: 48.21%;
+      margin-bottom: 72px;
+      &:nth-last-child(-n+2){
+        margin-bottom: 0;
+      }
+      &:nth-child(-n+6){
+        display: none;
+      }
+      &:nth-child(n+7){
+        display: block;
+      }
+    }
+    .colorLeft, .colorRight{
+      width: 24px;
+      height: 24px;
+    }
+  }
+  @media (max-width: $mobileSize){
+    margin-bottom: 8px;
+    li{
+      width: 100%;
+      margin-bottom: 32px;
+      &:nth-child(n+4){
+        display: none;
+      } 
+      &:nth-child(-n+3){
+        display: block;
+      }
+    }
+    .colorLeft, .colorRight{
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.sunglasses{
+  .pagination{
+    display: none;
+    @media (max-width: $tableSize){
+      display: flex;
+      margin-bottom: 104px;
+    }
+    @media (max-width: $mobileSize){
+      margin-bottom: 56px;
+    }
+  }
+}

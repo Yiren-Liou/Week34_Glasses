@@ -1,0 +1,633 @@
+// index banner
+
+.banner{
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 350px 0;
+  .slogan{
+    text-align: right;
+    h2{
+      text-align: right;
+      font-size: 64px;
+      line-height: 96px;
+    }
+    p{
+      @include fontL;
+    }
+  }
+  @media (max-width: $tableSize){
+    background-image: url(../images/banner-sm.png);
+    padding: 372px 0;
+    .slogan{
+      p{
+        @include fontM;
+      }
+      h2{
+        @include fontXl; 
+      }
+    }
+  }
+  @media (max-width: $mobileSize){
+    padding: 164px 0;
+    .slogan{
+      p{
+        @include fontS;
+      }
+      h2{
+        font-size: 32px;
+        line-height: 72px;
+      }
+    }
+  }
+}
+
+// 專業用心
+
+.professional{
+  background-color: $sectionBgColor;
+  .sectionTitle{
+    color: $secondaryColor;
+    margin-bottom: 44px;
+  }
+  .profList{
+    padding-bottom: 80px;
+    li{
+      align-items: center;
+      width: 23.5%;
+      padding: 0 37px; 
+      p{
+        @include fontS;
+        color: #000;
+      }
+      &:last-child{
+        padding-top: 12px;
+        img{
+          margin-bottom: 52px;
+        }
+      }
+    }
+    .ListTitel{
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 4px;
+    }
+    img{
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: $tableSize){
+    padding-top: 40px;
+    .sectionTitle{
+      margin-bottom: 12px;
+    }
+    .profList{
+      flex-wrap: wrap;
+      padding-bottom: 28px;
+      li{
+        width: 48%;
+        padding: 0 40px;
+        margin-bottom: 20px;
+        
+        &:nth-child(1){
+          order:3;
+        }
+        &:nth-child(4){
+          order:4;
+          img{
+            margin-bottom: 32px;
+          }
+        }
+      }
+      img{
+        margin-bottom: 16px;
+      }
+    }
+  }
+  @media (max-width: $mobileSize){
+    padding-top: 32px;
+    .sectionTitle{
+      margin-bottom: 32px;
+    }
+    .profList{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li{
+        width: 65%;
+        padding: 0;
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+} 
+
+// 經典產品
+
+.classicProduct{
+  .classicList{
+    margin-bottom: 80px;
+    li{
+      display: flex;
+      margin-bottom: 32px;
+      &:nth-child(2){
+        flex-direction: row-reverse;
+        .classicCategory{
+          margin-right: 24px;
+        }
+      }
+      &:last-child{
+        margin-bottom: 0;
+      } 
+    }
+  }
+  .classicCategory{
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    .categoryIcon{
+      margin-right: 8px;
+    }
+    .categoryTitle{
+      @include fontXl;
+      font-style: italic ;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $primaryColor;
+    }
+    .mobileIcon{
+      display: none;
+    }
+  }
+  .hoverImg{
+    position: relative;
+    .classicImg{
+      width: 100%;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      background: url(../images/product-2-color.png);
+      background-size: contain;
+      background-position: center center;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+    }
+    &:hover::before{
+      opacity: 1;
+    }
+  }
+  @media (max-width: $tableSize){
+    padding-top: 40px;
+    .sectionTitle{
+      margin-bottom: 32px;
+    }
+    .classicList{
+      margin-bottom: 40px;
+      li{
+        margin-bottom: 8px;
+        &:nth-child(2){
+          flex-direction: row;
+          .classicCategory{
+            margin-right: 0;
+          }
+        }
+      }
+      .classicImg{
+        width: 50%;         
+      }
+      .hoverImg{
+        width: 50%;
+        .classicImg{
+          width: 100%;
+        }
+      }
+    }
+    .classicCategory{
+      width: 50%;
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: center;
+      .categoryTitle{
+        font-size: 28px;
+        line-height: 42px;
+      }
+    }
+  }
+  @media (max-width: $mobileSize){
+    padding-top: 24px;
+    .sectionTitle{
+      margin-bottom: 16px;
+    }
+    .classicList{
+      li{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;       
+      }
+      .classicImg, .hoverImg{
+        width: 100%;         
+      }
+    }
+    .classicCategory{
+      position: absolute;
+      .categoryTitle{
+        color: $decoColor;
+      }
+      .categoryIcon{
+        display: none;
+      }
+      .mobileIcon{
+        display: block;
+      }
+    } 
+  }
+}
+
+// 聯名鏡框
+.brandProduct{
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  background-position: center center;
+  padding-bottom: 479px;
+  .mobileShowImg{
+    display: none;
+  }
+  .brandTop{
+    justify-content: center;
+    .brandLeft, .btmLeft{
+      margin-right: 8px;
+    }
+    .brandRightTop, .btmRightTop{
+      margin-bottom: 8px;
+    }
+    .btmRight{
+      align-items: flex-end;
+    }
+  }
+  
+  .moreTxt{
+    position: relative;
+    height: 100%;
+    max-width: 30%;
+    margin-right: 85px;
+    cursor: pointer;
+    &::after{
+      content: "";
+      position: absolute;
+      background: $decoColor;
+      top: 8%;
+      bottom: 8%;
+      left: 10%;
+      right: -85px;
+    }
+    &:hover span::before{
+      transform: translateY(-85px);
+      opacity: 0.7; 
+    }
+    &:hover span::after{
+      transform: translateY(-150px);
+      opacity: 0.4;
+    }
+    &:hover img:last-child{
+      transform: translateX(10px);
+    }
+    span{
+      margin-left: 32px;
+      font-size: 72px;
+      line-height: 108px;
+      color: #AA0601;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+      white-space: nowrap;
+      &::before{
+        content: 'MORE';
+        position: absolute;
+        transition: all .55s .3s;
+        transform: translateY(0px);
+      }
+      &::after{
+        content: 'MORE';
+        position: absolute;
+        transition: all .55s .3s;
+        transform: translateY(0px);
+      }
+    }
+    .moreArrow{
+      position: absolute;
+      z-index: 100;
+      top: 40%;
+      right: -30%;
+      transition: all .55s .3s;
+    }
+  }
+  .brandBtmItem{
+    width: 48.75%;
+    position: relative;
+    p{
+      font-size: 72px;
+      line-height: 108px;
+      color: $primaryColor;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255,255,255,.5);
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      &:hover{
+        background: transparent;
+      }
+    }
+  }
+  @media (max-width: $tableSize){
+    padding-top: 40px;
+    padding-bottom: 417px;
+    .brandTop{
+      margin: 0 auto 40px auto;
+      max-width: 672px;
+      .brandLeft, .btmLeft{
+        margin-right: 3px;
+      }
+      .brandRightTop, .btmRightTop{
+        margin-bottom: 3px;
+      }
+    }
+    .moreTxt{
+      &:hover span::before{
+        transform: translateY(-50px);
+      }
+      &:hover span::after{
+        transform: translateY(-110px);
+      }
+      &:hover img:last-child{
+        transform: translateX(10px);
+      }
+      span{
+        font-size: 40px;
+        line-height: 30px;
+        margin-left: 30px;
+      }
+      .moreArrow{
+        width: 27px;
+        top: 35%;
+        right: -65%;
+      }
+    }
+    .brandBtmItem{
+      width: 47.91%;
+      p{
+        font-size: 32px;
+        line-height: 25px;
+      }
+    }
+  }
+  @media (max-width: $mobileSize){
+    padding-top: 24px;
+    padding-bottom: 189px;
+    .brandTop{
+      margin-bottom: 20px;
+      max-width: 352px;
+      .brandLeft, .btmLeft{
+        margin-right: 2px;
+      }
+      .brandRightTop, .btmRightTop{
+        margin-bottom: 2px;
+      }
+      .brandLeft{
+        width: 44%;
+      }
+      .brandRight{
+        width: 52%;
+      }
+      .btmRightTop{
+        display: none;
+      }
+    }
+    
+    .mobileShowImg{
+      display: block;
+    }
+    .brandRightBtm{
+      align-items: center;  
+      .btmLeft{
+        width: 18%;
+      }
+      .btmRight{
+        width: 82px;
+      }
+    }
+    .moreTxt{
+      height: auto;
+      max-width: 100%;
+      margin-right: 0;
+      &::after{
+        right: -67px;
+      }
+      &:hover span::before{
+        transform: translateY(-50px);
+      }
+      &:hover span::after{
+        transform: translateY(-110px);
+      }
+      &:hover img:last-child{
+        transform: translateX(10px);
+      }
+      span{
+        font-size: 26px;
+        line-height: 20px;
+        margin-left: 15px;
+      }
+      .moreArrow{
+        width: 18px;
+        top: 35%;
+        right: -45%;
+      }
+    }
+    .brandBtm{
+      flex-direction: column;
+    }
+    .brandBtmItem{
+      width: 100%;
+      &:nth-child(1){
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+// 顧客推薦
+.customer{
+  margin-top: -335px;
+  margin-bottom: 80px;
+  .listCard{
+    width: 23.5%;
+  }  
+  .customerTxt{
+    border: 1px solid #DEE2E6;
+    border-top: none; 
+    padding: 16px;
+    background-color: $decoColor;
+    @include fontS;
+    h3{
+      font-weight: 700;
+      line-height: 21px;
+    }
+    p{
+      line-height: 21px;
+    }
+    span{
+      color: #707070;
+    }
+  }
+  @media (max-width: $tableSize){
+    margin-top: -377px;
+    margin-bottom: 40px;
+    .sectionTitle{
+      margin-bottom: 32px;
+    }
+    .customerList{
+      flex-wrap: wrap;
+    }
+    .listCard{
+      width: 48.21%;
+      margin-bottom: 24px;
+    } 
+  }
+  @media (max-width: $mobileSize){
+    margin-top: -165px;
+    margin-bottom: 24px;
+    .sectionTitle{
+      margin-bottom: 16px;
+    }
+    .customerList{
+      flex-direction: column;
+    }
+    .listCard{
+      width: 100%;
+      margin-bottom: 16px;
+      img{
+        width: 100%;
+      }
+    } 
+  }
+}
+
+// 聯絡我們
+
+.contactUs{
+  background-color: $sectionBgColor;
+  .sectionTitle{
+    margin-bottom: 24px;
+  }
+  .contactInfo{
+    width: 66.66%;
+    margin: 0 auto;
+    p{
+      @include fontM;
+      margin-bottom: 20px;
+    }
+  }
+  .customerInfo{
+    .infoTitle{
+      @include fontS;
+      margin-bottom: 4px;
+    }
+    .infoContent{
+      padding: 15px 0 15px 16px;
+      background-color: transparent;
+      border: 1px solid #000;
+      cursor: pointer;
+      &:focus{
+         background-color: $decoColor;
+      }
+    }
+  }
+  .checkPolicy{
+    margin-bottom: 42px;
+    cursor: pointer;
+    @include fontS;
+  }
+  .btnSubmit{
+    margin: 0 auto 92px auto;
+    p{
+      @include fontS;
+      color: $decoColor;
+      background-color: $primaryColor;
+      text-align: center;
+      padding: 16px 58px;
+      border: none;
+      cursor: pointer;
+      &:hover{
+        background-color: $secondaryColor;
+      }
+    }
+  }
+
+  @media (max-width: $tableSize){
+    padding-top: 40px;
+    .sectionTitle{
+      margin-bottom: 16px;
+    }
+    .contactInfo{
+      width: 73.8%;
+      p{
+        @include fontS;
+        margin-bottom: 16px;
+      }
+    }
+    .customerInfo{
+      li{
+        margin-bottom: 12px;
+      }
+    }
+    .checkPolicy{
+      margin-bottom: 24px;
+    }
+    .btnSubmit{
+      margin-bottom: 56px;
+      p{
+        padding: 7px 36px;;
+      }
+    }
+  }
+  @media (max-width: $mobileSize){
+    padding-top: 24px;
+    .sectionTitle{
+      margin-bottom: 8px;
+    }
+    .contactInfo{
+      width: 91%;
+      p{
+        margin-bottom: 8px;
+      }
+    }
+    .customerInfo{
+      .infoTitle{
+        margin-bottom: 2px;
+      }
+      .infoContent{
+        padding: 7px 0 7px 12px;
+      }
+    }
+    .checkPolicy{
+      margin-bottom: 20px;
+    }
+    .btnSubmit{
+      margin-bottom: 48px;
+    }
+  }
+
+}

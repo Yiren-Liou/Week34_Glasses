@@ -1,0 +1,149 @@
+.locationSelect{
+	.pagination {
+		display: none;
+		@media (max-width: $mobileSize){
+			display: flex;
+		}
+	}
+}
+.selected{
+  align-items: center;
+  margin-bottom: 32px;
+  p{
+    font-size: 24px;
+    line-height: 30px;
+    margin-right: 22px;;
+  }
+  select{
+    width: 22%;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px 0 10px 19px;
+    color: #495057;
+	}
+	@media (max-width: $tableSize){
+		margin-bottom: 24px;
+		p{
+			font-size: 16px;
+		}
+		select{
+			width: 35%;
+			@include fontS;
+			padding: 12px 0 12px 16px;
+		}
+	}
+	@media (max-width: $mobileSize){
+		margin-bottom: 20px;
+		p{
+			font-size: 14px;
+			margin-right: 16px;
+		}
+		select{
+			width: 79%;
+			font-size: 14px;
+		}
+	}
+}
+
+.locationList{
+	margin-bottom: 146px;
+	@media (max-width: $tableSize){
+		margin-bottom: 80px;
+	}
+	@media (max-width: $mobileSize){
+		margin-bottom: 20px;
+		justify-content: center;
+	}
+}
+
+.locationListItem{
+  width: 32%;
+  margin-bottom: 28px; 
+  .shopName{
+	  font-size: 24px;
+	  line-height: 33px;
+	  padding: 16px 0 16px 24px;
+	  border: 1px solid #00000020;
+	}
+	.locationInfo{
+	  border: 1px solid #00000020;
+	  border-top: none;
+	  padding: 16px 40px 16px 36px;
+	  li{
+	    margin-bottom: 8px;
+	    align-items: center;
+	    p{
+	      @include fontM;
+	    }
+	    img{
+	      margin-right: 8px;
+	    }
+	    &:nth-child(2){
+	      img{
+	        margin: 2px 9px 0 1px;
+	      }
+	    }
+	    &:nth-child(3){
+	      img{
+	        margin: -20px 10px 0 5px;
+	      }
+	    }
+	  }
+	}
+	input{
+	  width: 100%;
+	  padding: 20px 0;
+	  text-align: center;
+	  background-color: #000;
+	  @include fontM;
+	  border: 1px solid #000;
+	  cursor: pointer;
+	  &:hover{
+	    background-color: $primaryColor;
+	    border-color: $primaryColor;
+	  }
+	}
+	@media (max-width: $tableSize){
+		width: 48%;
+		margin-bottom: 24px;
+		.shopName{
+			@include fontS;
+			padding: 8px 0 8px 16px;
+		}
+		.locationInfo{
+			padding: 16px 24px 16px 16px;
+			li{
+				margin-bottom: 10px;
+				p{
+					font-size: 14px;
+					line-height: 21px;
+				}
+				&:nth-child(3){
+					img{
+						margin-top: 0;
+					}
+				}
+			}
+		}
+		input{
+			padding: 16px 0;
+			font-size: 14px;
+			line-height: 21px;
+		}   	
+	}
+	@media (max-width: $mobileSize){
+		width: 100%;
+		margin-bottom: 20px;
+		&:nth-child(n+4){
+			display: none;
+		} 
+		.locationInfo{
+			padding: 16px 24px 16px 16px;
+		}  
+	}  
+}
+
+
+
+
+

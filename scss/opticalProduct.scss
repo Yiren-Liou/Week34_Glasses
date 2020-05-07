@@ -1,0 +1,62 @@
+.opticalMenu{
+  li{
+    &:nth-of-type(1){
+      border-bottom: 16px solid $primaryColor;
+      a{
+        padding-bottom: 8px;
+      }
+    }
+  }
+  @media (max-width: $tableSize){
+    li{
+      &:nth-of-type(1){
+        border-bottom: 8px solid $primaryColor;
+        a{
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+  @media (max-width: $mobileSize){
+    li{
+      &:nth-of-type(1){
+        border-bottom: 4px solid $primaryColor;
+        a{
+          padding-bottom: 5px;
+        }
+      }
+    } 
+  }
+}
+
+.opticalList{
+  li{
+    width: 23.5%;
+    margin-bottom: 104px;
+    .colorLeft, .colorRight{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media (max-width: $tableSize){
+  .opticalList{
+    li{
+      width: 48%;
+      margin-bottom: 72px;
+    }
+  }
+}
+@media (max-width: $mobileSize){
+  .opticalList{
+    flex-direction: column;
+    li{
+      width: 100%;
+      margin-bottom: 32px;
+      &:nth-child(n+4){
+        display: none;
+      } 
+    }
+  }
+}

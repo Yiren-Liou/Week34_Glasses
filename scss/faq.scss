@@ -1,0 +1,81 @@
+.faqBanner{
+	margin-bottom: 88px;
+	@media (max-width: $tableSize){
+		margin-bottom: 40px;
+	}
+	@media (max-width: $mobileSize){
+		margin-bottom: 24px;
+	}
+}
+
+.qaList{
+	margin-bottom: 156px;
+	h2{
+		font-size: 32px;
+		line-height: 63px;
+	}
+	.cardItem{
+		border: 1px solid #000;
+	}
+	.cardItemHeader{
+		padding: 22px 0 22px 38px;
+		border: 1px solid #000;
+		a{
+			align-items: center;
+		}
+		h3{
+			font-size: 20px;
+			line-height: 23px;
+			font-weight: bold;
+		}
+	}
+	.cardItemBody{
+		background-color: #F2F2F2;
+		padding: 22px 264px 22px 38px;
+		p{
+			@include fontS;
+			text-align: left;
+		}
+	}
+	@media (max-width: $tableSize){
+		margin-bottom: 104px;
+		h2{
+			font-size: 28px;
+			margin-bottom: 16px;
+		}
+		.cardItemHeader{
+			padding: 16px 0 16px 24px;
+			h3{
+				font-size: 16px;
+			}
+		}
+		.cardItemBody{
+			padding: 16px 24px;
+			p{
+				font-size: 14px;
+				line-height: 21px;
+			}
+		}
+	}
+	@media (max-width: $mobileSize){
+		margin-bottom: 56px;
+		h2{
+			font-size: 20px;
+			line-height: 1;
+			margin-bottom: 16px;
+		}
+		.cardItemHeader{
+			padding: 16px 0 16px 16px;
+		}
+		.cardItemBody{
+			padding: 16px;
+		}
+	}
+}
+
+.cardItem:not(.active) .up{
+  display: none;
+}
+.cardItem.active .down{
+  display: none;
+}

@@ -1,0 +1,32 @@
+$tableSize: 768px;
+$mobileSize: 767px;
+
+$fontSizeXl: 48px;
+$fontSizeL: 36px;
+$fontSizeM: 20px;
+$fontSizeS: 16px;
+
+$primaryColor: #AA0601;
+$secondaryColor: #650300;
+$decoColor: #fff;
+$sectionBgColor: #AA06010D;
+
+@mixin fontXl{
+  font-size: $fontSizeXl ;
+  line-height: calc(#{$fontSizeXl} * 1.5);
+}
+
+@mixin fontL{
+  font-size: $fontSizeL ;
+  line-height: calc(#{$fontSizeL} * 1.5);
+}
+
+@mixin fontM{
+  font-size: $fontSizeM ;
+  line-height: calc(#{$fontSizeM} * 1.5);
+}
+
+@mixin fontS{
+  font-size: $fontSizeS;
+  line-height: calc(#{$fontSizeS} * 1.5);
+}

@@ -1,0 +1,283 @@
+// header
+.nav{
+  background-color: $primaryColor;
+  padding-left: 56px;
+  padding-right: 88px;
+  align-items: center;
+}
+.hamIcon{
+  display: none;
+}
+.menu{
+  a{
+    @include fontM;
+    padding: 40px 32px;
+    &:hover{
+      background-color: $decoColor;
+      color: $primaryColor;
+    }
+  }
+}
+
+@media (max-width: $tableSize){
+  .nav{
+    padding-left: 28px;
+    padding-right: 48px;
+  }
+  .menu{
+    a{
+      padding: 40px 20px;
+    }
+  }
+}
+@media (max-width: $mobileSize){
+  .nav.dfSb{
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+  }
+  .hamIcon{
+    display: block;
+    position: absolute;
+    left: 16px;
+    color: $decoColor;
+  }
+  .menu{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    z-index: 120;
+    transition: all 0.8s;
+    display: flex;
+    flex-direction: column;
+    a{
+      text-align: center;
+      background: $primaryColor;
+      border-top: 1px solid $decoColor;
+      padding: 16px 0;
+      z-index: 120;
+      &:hover{
+        background: #8f0400;
+      }
+    }
+  }
+  .menu.dropdown{
+    max-height: 252px;
+  } 
+}
+
+
+//footer
+
+.footer{
+  background-color: $primaryColor;
+  padding-top: 36px;
+  .container{
+    padding: 0 25px;
+  }
+  .topSide{
+    border-bottom: 1px solid $decoColor;
+    margin-bottom: 24px;
+  }
+  .topSideNav{
+    margin-bottom: 32px;
+    .btmMenu{
+      a{
+        @include fontS;
+        padding: 16px 48px 16px 0;
+        font-weight: normal;
+      }
+    }
+  } 
+  .mediaIcon{
+    li{
+      a{
+        margin: 0 16px;
+      }
+      &:last-child a{
+        margin-right: 0;
+      }
+    }
+  }   
+  .contact{
+    li{
+      margin-bottom: 16px;
+      &:nth-child(1){
+        img{
+          margin-right: 23px;
+        }
+      }
+      &:last-child{
+        margin-bottom: 24px;
+      }
+    }
+    img{
+      margin-right: 12px;
+    }
+    p{
+      @include fontL;
+      // color: $decoColor;
+      font-weight: normal;
+    }
+  }
+  
+  .btmSide{
+    padding-bottom: 27px;
+    align-items: center;
+    .btmLogo{
+      margin-right: 38px;
+    }
+  }
+  
+  .copyright{
+    width: 74%;
+    @include fontS;
+    font-weight: normal;
+  }
+  .policy{
+    width: 20%;
+    li{
+      &:nth-child(2){
+        margin-left: 62px;
+      }
+    }
+    a{
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: normal;
+      padding: 16px 0;
+    } 
+  }
+  @media (max-width: $tableSize){
+    padding-top: 40px;
+    .container{
+      padding: 0;      
+    }
+    .topSide{
+      margin-bottom: 24px;
+    }
+    .topSideNav{
+      margin-bottom: 24px;
+      .btmMenu{
+        a{
+          padding: 0 40px 0 0;
+        }
+      }
+    } 
+    .mediaIcon{
+      li{
+        a{
+        width: 24px;
+        height: 24px;
+        margin: 0 12px;
+        }
+      }
+    }    
+    .contact{
+      li{
+        margin-bottom: 8px;    
+        &:nth-child(1){
+          img{
+            margin-right: 8px;
+          }
+        }
+      }
+      img{
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+      }
+      p{
+        @include fontM;
+      }
+    }
+    .btmSide{
+      padding-bottom: 40px;
+      .btmLogo{
+        display: none;
+      }
+    }
+    .copyright{
+      width: 77%;
+      @include fontS;
+    }
+    .policy{
+      width: 23%;
+      li{
+        &:nth-child(2){
+          margin-left: 24px;
+        }
+      }
+    }
+  }
+  @media (max-width: $mobileSize){
+    padding-top: 24px;
+    .topSide{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .topSideNav{
+      .menu{
+        display: none;
+      }
+    }
+    .contact{
+      li{
+        align-items: center;
+        img{
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+        }
+        p{
+          @include fontS;
+          font-weight: normal;
+        }
+      }
+    }
+    .btmSide{
+      padding-bottom: 20px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      .btmLogo{
+        display: block;
+        margin: 0;
+        order:1;
+        width: 13%;
+      }
+    }   
+    .copyright{
+      width: 100%;
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .policy{
+      width: 87%;
+      flex-direction: column;
+      li{
+        margin-bottom: 8px;
+        &:nth-child(2){
+          margin-left: 0;
+        }
+      }
+      a{
+        padding: 0;
+      }
+    }   
+  }   
+} 
+
+
+
+
+
+    
+     
+

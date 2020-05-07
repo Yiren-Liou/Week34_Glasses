@@ -1,0 +1,365 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html,body {
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI',
+                'Microsoft JhengHei', 'Roboto',
+                'Helvetica Neue', 'Arial', 'sans-serif' !important;
+  font-weight: 600;
+}
+  
+// flex
+
+.df{
+  display: flex;
+}
+
+.dfSb{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dfSa{
+  display: flex;
+  justify-content: space-around;
+}
+
+.dfCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dfColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+.dfWrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// margin 
+
+.mb16{
+  margin-bottom: 16px;
+}
+
+.mb24{
+  margin-bottom: 24px;
+}
+
+.mb60{
+  margin-bottom: 60px;
+}
+
+// padding 
+
+.pt64{
+  padding-top: 64px;
+}
+
+// common
+
+a{
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: $tableSize){
+    max-width: 672px;
+  }
+  @media (max-width: $mobileSize){
+    max-width: 352px;
+  }
+}
+
+.logo{
+  width: 80px;
+  height: 49px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  @media (max-width: $mobileSize){
+    width: 48px;
+    height: 30px;
+  }
+}
+
+.sectionTitle{
+  @include fontXl;
+  text-align: center;
+  @media (max-width: $tableSize){
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @media (max-width: $mobileSize){
+    font-size: 24px;
+  }
+}
+
+.decoColorTxt{
+  color: $decoColor;
+}
+
+.secondaryColorTxt{
+  color: $secondaryColor;
+}
+
+//faq and location
+
+.bgBanner{
+  background: url('../images/qa.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 304px;
+	margin-bottom: 16px;
+	.container{
+  	position: relative;
+  }
+  .pageTitleRegion{
+  	position: absolute;
+    bottom: 0;
+    img{
+      width: 58px;
+    }
+  }
+  .pageTitle{
+    margin-right: 24px;
+    font-size: 64px;
+    line-height: 80px;
+    margin-right: 10px;
+  }
+  @media (max-width: $tableSize){
+    padding-top: 237px;
+    margin-bottom: 8px;
+    .pageTitleRegion{
+      img{
+        width: 48px;
+      }
+    }
+		.pageTitle{
+	    margin-right: 16px;
+	    font-size: 48px;
+	  }
+  }
+  @media (max-width: $mobileSize){
+    padding-top: 103px;
+		.pageTitleRegion{
+      bottom: -20px;
+      img{
+        width: 24px;
+      }
+		}
+		.pageTitle{
+			font-size: 28px;
+			margin-right: 8px;
+		}
+  }
+}
+
+// optical and sunglasses html
+
+.productNav{
+  justify-content: center;
+  align-items: center;
+}
+
+.ProductBanner{
+  margin-bottom: 88px;
+  .ProductBannerImg{
+    width: 49.5%;
+  }
+  @media (max-width: $tableSize){
+    margin-bottom: 40px;
+    .ProductBannerImg{
+      width: 50%;
+    }
+  }
+  @media (max-width: $mobileSize){
+    .ProductBanner{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.productMenu{
+  width: 1200px;
+  li{
+    width: 33.33%;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    a{
+      justify-content: center;
+      align-items: center;   
+      font-size: 42px;
+      line-height: 63px;
+      padding: 24px 0;
+      &:hover{
+        background-color: $primaryColor;
+        color: $decoColor;
+      }
+    }
+  } 
+  img{
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+  }
+  @media (max-width: $tableSize){
+    width: 100%;
+    li{
+      a{  
+        font-size: 28px;
+        line-height: 42px;
+        padding: 16px 0;
+      }
+    } 
+    img{
+      width: 32px;
+      height: 32px;
+    }
+  }
+  @media (max-width: $mobileSize){
+    li{
+      a{  
+        font-size: 14px;
+        line-height: 19px;
+        padding: 8px 0;
+      }
+    } 
+    img{
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.productCategory{
+  font-size: 42px;
+  line-height: 63px;
+  text-align: center;
+  @media (max-width: $tableSize){
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @media (max-width: $mobileSize){
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.chineseTitle{
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: normal;
+  margin-bottom: 48px;
+  text-align: center;
+  @media (max-width: $tableSize){
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 32px;
+  }
+  @media (max-width: $mobileSize){
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.pcShowImg{
+  @media (max-width: $tableSize){
+    display: none;
+  }
+}
+
+.tableShowImg{
+  display: none;
+  @media (max-width: $tableSize){
+    display: block;
+  }
+}
+
+.productID{
+  font-size: 24px;
+  line-height: 36px;
+  @media (max-width: $tableSize){
+    line-height: 30px;
+  }
+  @media (max-width: $mobileSize){
+    font-size: 16px;
+  }
+}
+.productPrice{
+  font-size: 24px;
+  line-height: 36px;
+  color: $primaryColor;
+  font-weight: 700;
+  @media (max-width: $tableSize){
+    line-height: 30px;
+  }
+  @media (max-width: $mobileSize){
+    font-size: 16px;
+  }
+}
+
+.colorLeft{
+  background-color: #5F3E2D;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+.colorRight{
+  background-color: #B75929;
+  border-radius: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 156px;
+  li{
+      width: auto;
+    }
+  a{
+    font-size: 18px;
+    line-height: 27px;
+    padding: 10px 16px;
+    color: #000;
+    text-align: center;
+    border: 1px solid #555;
+    &:hover{
+      background-color: #000;
+      color: $decoColor;
+    }
+  }
+  .nextPage{
+    background-color: #f2f2f2;
+  }
+  .active {
+    background-color: #000;
+    color: $decoColor;
+  }
+  @media (max-width: $tableSize){
+    margin-bottom: 56px;
+    a {
+      font-size: 11px;
+      line-height: 17px;
+      padding: 8px 10px;
+    }
+  }
+  @media (max-width: $mobileSize){
+    margin-bottom: 56px;
+    a {
+      font-size: 11px;
+      line-height: 17px;
+      padding: 8px 10px;
+    }
+  }
+}

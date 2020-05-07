@@ -1,0 +1,32 @@
+.locationMap{
+	margin-bottom: 156px;
+	@media (max-width: $tableSize){
+		flex-direction: column;
+		margin-bottom: 104px;
+		.locationListItem{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 32px;
+			.shopImg, .shopInfo{
+				width: 48%;
+			}
+		}
+		input{
+			display: none;
+		}
+	}
+	@media (max-width: $mobileSize){
+		margin-bottom: 56px;
+		.locationListItem{
+			flex-direction: column;
+			margin-bottom: 20px;
+			.shopImg, .shopInfo{
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+
